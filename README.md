@@ -40,3 +40,12 @@ Le projet inclut un **front-end** développé en **React.js**, un **back-end** e
 
    ```bash
    git clone https://github.com/Fred-Falzoi/olympics-frontend.git
+
+2. Installez les dépendances pour le front-end :
+   ```bash
+   cd olympics-frontend
+   npm install
+
+3. Lancez l'application front-end localement :
+   ```bash
+   npm start
