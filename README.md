@@ -1,4 +1,4 @@
-# Olympic Ticketing Platform
+# Plateforme de billetterie J.O 2024
 
 ## Description
 
