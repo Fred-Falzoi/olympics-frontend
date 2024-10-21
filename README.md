@@ -33,3 +33,10 @@ Le projet inclut un **front-end** développé en **React.js**, un **back-end** e
 - Node.js (v14 ou supérieure)
 - PHP (v7.4 ou supérieure)
 - PostgreSQL (ou toute autre base de données relationnelle)
+
+### Étapes d'installation
+
+1. Clonez ce dépôt sur votre machine locale :
+
+   ```bash
+   git clone https://github.com/Fred-Falzoi/olympics-frontend.git
