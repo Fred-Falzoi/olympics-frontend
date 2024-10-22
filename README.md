@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+# Plateforme de billetterie J.O 2024
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
 
-## Available Scripts
+Cette application est une plateforme de billetterie développée pour les Jeux Olympiques de 2024. Elle permet aux utilisateurs de :
+- Consulter les différentes offres de billets (solo, duo, familial).
+- Ajouter des billets au panier et les réserver.
+- Créer un compte, se connecter, et gérer leurs achats.
+- Bénéficier d'une sécurité renforcée grâce à l'authentification à deux facteurs.
 
-In the project directory, you can run:
+Le projet inclut un **front-end** développé en **React.js**, un **back-end** en **Symfony**, ainsi qu'une base de données relationnelle en **PostgreSQL**.
 
-### `npm start`
+## Fonctionnalités
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Affichage des offres de billets.
+- Gestion du panier.
+- Authentification et création de compte utilisateur.
+- Sécurisation des achats avec génération de clés et QR Code.
+- E-billet sécurisé et scannable le jour de l'événement.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies utilisées
 
-### `npm test`
+- **Front-end** : React.js
+- **Back-end** : Symfony
+- **Base de données** : PostgreSQL
+- **API** : Axios pour les requêtes HTTP
+- **Hébergement** : Netlify (front-end) et Heroku (back-end)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation
 
-### `npm run build`
+### Pré-requis
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Node.js (v14 ou supérieure)
+- PHP (v7.4 ou supérieure)
+- PostgreSQL (ou toute autre base de données relationnelle)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Étapes d'installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clonez ce dépôt sur votre machine locale :
 
-### `npm run eject`
+   ```bash
+   git clone https://github.com/Fred-Falzoi/olympics-frontend.git
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. Installez les dépendances pour le front-end :
+   ```bash
+   cd olympics-frontend
+   npm install
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+3. Lancez l'application front-end localement :
+   ```bash
+   npm start

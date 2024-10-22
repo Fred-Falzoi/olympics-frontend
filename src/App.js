@@ -1,25 +1,34 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import Home from './components/Home';
+import Offers from './components/Offers';
+import Cart from './components/Cart';
+import Auth from './components/Auth';
+import Header from './components/Header';
+import Signup from './components/Signup';
 import './App.css';
+import { CartProvider } from './CartContext'; // Importer le CartProvider
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    // Envelopper toute l'application dans le CartProvider
+    <CartProvider>
+      <Router>
+        <div className="App">
+          <Header /> {/* Le Header sera visible sur toutes les pages */}
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/offers" element={<Offers />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/auth" element={<Auth />} />
+            <Route path="*" element={<Navigate to="/" />} /> {/* Redirige vers la page d'accueil */}
+			<Route path="/signup" element={<Signup />} />
+          </Routes>
+        </div>
+      </Router>
+    </CartProvider>
   );
 }
 
 export default App;
+

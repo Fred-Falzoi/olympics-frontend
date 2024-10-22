@@ -1,0 +1,27 @@
+/* Header styles */
+header {
+  background-color: var(--blue-olympic);
+  padding: 20px;
+  text-align: center;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+header nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+header nav ul li a {
+  color: var(--white-background);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+header nav ul li a:hover {
+  color: var(--yellow-gold);
+}
