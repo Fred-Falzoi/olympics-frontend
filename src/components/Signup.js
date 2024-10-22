@@ -3,13 +3,12 @@ import { useNavigate } from 'react-router-dom';
 
 const Signup = () => {
   const [formData, setFormData] = useState({
-    username: '',
+    name: '',
     email: '',
-    password: '',
-    confirmPassword: '',
+    password: ''
   });
 
-  const [error, setError] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -19,65 +18,70 @@ const Signup = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (formData.password !== formData.confirmPassword) {
-      setError("Les mots de passe ne correspondent pas.");
-    } else {
-      // Ici, on simule l'enregistrement de l'utilisateur
-      console.log('Utilisateur enregistré :', formData);
-      setError('');
-      navigate('/auth'); // Redirection vers la page d'authentification
+    try {
+      // Envoyer une requête d'inscription à ton API
+      const response = await fetch('https://olympics-backend.onrender.com/api/users/register', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        console.log('Inscription réussie:', data);
+        // Rediriger l'utilisateur après l'inscription
+        navigate('/auth');
+      } else {
+        const errorData = await response.json();
+        setErrorMessage(errorData.message || 'Erreur lors de l\'inscription');
+      }
+    } catch (error) {
+      console.error('Erreur:', error);
+      setErrorMessage('Impossible de contacter le serveur.');
     }
   };
 
   return (
     <div className="container">
       <h1>Inscription</h1>
-      {error && <p style={{ color: 'red' }}>{error}</p>}
+      {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
       <form onSubmit={handleSubmit}>
         <div>
-          <label>Nom d'utilisateur:</label>
           <input
             type="text"
-            name="username"
-            value={formData.username}
+            name="name"
+            placeholder="Nom"
+            value={formData.name}
             onChange={handleChange}
             required
           />
         </div>
         <div>
-          <label>Email:</label>
           <input
             type="email"
             name="email"
+            placeholder="Email"
             value={formData.email}
             onChange={handleChange}
             required
           />
         </div>
         <div>
-          <label>Mot de passe:</label>
           <input
             type="password"
             name="password"
+            placeholder="Mot de passe"
             value={formData.password}
             onChange={handleChange}
             required
           />
         </div>
-        <div>
-          <label>Confirmer le mot de passe:</label>
-          <input
-            type="password"
-            name="confirmPassword"
-            value={formData.confirmPassword}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <button type="submit">S'inscrire</button>
+        <button type="submit" className="btn">S'inscrire</button>
       </form>
     </div>
   );

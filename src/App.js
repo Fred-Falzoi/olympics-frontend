@@ -21,8 +21,8 @@ function App() {
             <Route path="/offers" element={<Offers />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/auth" element={<Auth />} />
+            <Route path="/signup" element={<Signup />} /> {/* Route pour Signup */}
             <Route path="*" element={<Navigate to="/" />} /> {/* Redirige vers la page d'accueil */}
-			<Route path="/signup" element={<Signup />} />
           </Routes>
         </div>
       </Router>
@@ -31,4 +31,3 @@ function App() {
 }
 
 export default App;
-
