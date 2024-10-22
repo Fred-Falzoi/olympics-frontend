@@ -22,7 +22,7 @@ const Signup = () => {
     e.preventDefault();
 
     try {
-      // Envoyer une requête d'inscription à ton API
+      // Envoyer une requête d'inscription à l' API
       const response = await fetch('https://olympics-backend.onrender.com/api/users/register', {
         method: 'POST',
         headers: {

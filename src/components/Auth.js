@@ -21,7 +21,7 @@ const Auth = () => {
     e.preventDefault();
     
     try {
-      // Envoyer une requête de connexion à ton API
+      // Envoyer une requête de connexion à l' API
       const response = await fetch('https://olympics-backend.onrender.com/api/users/login', {
         method: 'POST',
         headers: {
