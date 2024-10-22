@@ -2,12 +2,12 @@
 
 ## Sécurité de l'application
 
-L'application de réservation de tickets pour les Jeux Olympiques doit traiter des données sensibles. Voici les aspects de sécurité abordés :
+L'application doit traiter des données sensibles. Voici les aspects de sécurité abordés :
 
 ### 1. Authentification et autorisation
 - **Authentification** : 
-  - Les mots de passe des utilisateurs sont hashés avec une fonction cryptographique robuste (ex: bcrypt).
-  - L'ajout d'un second facteur d'authentification (MFA) est recommandé pour renforcer la sécurité.
+  - Les mots de passe des utilisateurs sont hashés avec une fonction cryptographique robuste.
+  - L'ajout d'un second facteur d'authentification.
 - **Autorisation** :
   - Accès limité selon les rôles (utilisateur et administrateur). L'administrateur dispose de droits supplémentaires pour la gestion des offres.
 
@@ -30,7 +30,7 @@ L'application de réservation de tickets pour les Jeux Olympiques doit traiter d
 
 ## Évolutions futures de l'application
 
-### 1. Scalabilité (évolutivité)
+### 1. Évolutivité
 - **Évolutivité horizontale** : Utilisation de **AWS Auto Scaling** pour ajuster automatiquement les ressources.
 - **CDN** : Utilisation d'un CDN comme **CloudFront** pour accélérer la distribution des ressources statiques.
 
