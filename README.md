@@ -24,7 +24,7 @@ Le projet inclut un **front-end** développé en **React.js**, un **back-end** e
 - **Back-end** : Symfony
 - **Base de données** : PostgreSQL
 - **API** : Axios pour les requêtes HTTP
-- **Hébergement** : Netlify (front-end) et Heroku (back-end)
+- **Hébergement** : Github (front-end) et Render (back-end)
 
 ## Installation
 
