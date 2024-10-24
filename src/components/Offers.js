@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { CartContext } from '../CartContext'; // Assurez-vous que le bon chemin est utilisé
+import { CartContext } from '../CartContext';
 import { Link } from 'react-router-dom';
 
 const Offers = () => {
@@ -9,7 +9,7 @@ const Offers = () => {
     { id: 3, name: 'Offre Familiale', price: 320 }
   ];
 
-  const { addToCart } = useContext(CartContext); // Utiliser le contexte du panier pour ajouter des articles
+  const { addToCart } = useContext(CartContext);
   const [selectedOffers, setSelectedOffers] = useState([]);
 
   const handleSelectOffer = (id) => {
@@ -22,7 +22,7 @@ const Offers = () => {
 
   const handleAddToCart = () => {
     const selectedOfferDetails = offers.filter(offer => selectedOffers.includes(offer.id));
-    selectedOfferDetails.forEach(offer => addToCart(offer)); // Ajouter chaque offre sélectionnée au panier
+    selectedOfferDetails.forEach(offer => addToCart(offer));
   };
 
   return (
@@ -53,6 +53,15 @@ const Offers = () => {
           >
             Ajouter au Panier
           </button>
+        </div>
+        
+        {/* Lien texte vers la page du panier */}
+        <div className="link-container">
+          <p>
+            <Link to="/cart" style={{ textDecoration: 'underline', color: 'blue' }}>
+              Allez au Panier
+            </Link>
+          </p>
         </div>
       </section>
     </div>
