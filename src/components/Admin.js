@@ -1,34 +1,36 @@
 import React, { useState } from 'react';
 
 const Admin = () => {
+  // Initialisation de l'état avec une liste d'offres par défaut
   const [offers, setOffers] = useState([
     { id: 1, name: 'Offre Solo', price: 100 },
     { id: 2, name: 'Offre Duo', price: 180 },
     { id: 3, name: 'Offre Familiale', price: 320 }
   ]);
 
+  // État pour la nouvelle offre à ajouter
   const [newOffer, setNewOffer] = useState({ name: '', price: '' });
 
-  // Ajouter une nouvelle offre
+  // Fonction pour ajouter une nouvelle offre
   const addOffer = () => {
-    const newId = offers.length + 1;
-    const newOfferWithId = { ...newOffer, id: newId };
-    setOffers([...offers, newOfferWithId]);
-    setNewOffer({ name: '', price: '' });
+    const newId = offers.length + 1; // Génère un nouvel ID basé sur la longueur de la liste
+    const newOfferWithId = { ...newOffer, id: newId }; // Associe l'ID à la nouvelle offre
+    setOffers([...offers, newOfferWithId]); // Ajoute la nouvelle offre à la liste
+    setNewOffer({ name: '', price: '' }); // Réinitialise le formulaire
   };
 
-  // Modifier une offre existante
+  // Fonction pour modifier une offre existante
   const updateOffer = (id, updatedOffer) => {
     setOffers(
       offers.map((offer) =>
-        offer.id === id ? { ...offer, ...updatedOffer } : offer
+        offer.id === id ? { ...offer, ...updatedOffer } : offer // Met à jour l'offre correspondante par ID
       )
     );
   };
 
-  // Supprimer une offre
+  // Fonction pour supprimer une offre
   const deleteOffer = (id) => {
-    setOffers(offers.filter((offer) => offer.id !== id));
+    setOffers(offers.filter((offer) => offer.id !== id)); // Supprime l'offre correspondant à l'ID
   };
 
   return (
@@ -50,7 +52,7 @@ const Admin = () => {
           value={newOffer.price}
           onChange={(e) => setNewOffer({ ...newOffer, price: e.target.value })}
         />
-        <button onClick={addOffer}>Ajouter l'offre</button>
+        <button onClick={addOffer}>Ajouter l'offre</button> {/* Bouton pour ajouter l'offre */}
       </div>
 
       {/* Liste des offres existantes */}
@@ -63,17 +65,17 @@ const Admin = () => {
                 type="text"
                 value={offer.name}
                 onChange={(e) =>
-                  updateOffer(offer.id, { name: e.target.value })
+                  updateOffer(offer.id, { name: e.target.value }) // Modifie le nom de l'offre
                 }
               />
               <input
                 type="number"
                 value={offer.price}
                 onChange={(e) =>
-                  updateOffer(offer.id, { price: e.target.value })
+                  updateOffer(offer.id, { price: e.target.value }) // Modifie le prix de l'offre
                 }
               />
-              <button onClick={() => deleteOffer(offer.id)}>Supprimer</button>
+              <button onClick={() => deleteOffer(offer.id)}>Supprimer</button> {/* Bouton pour supprimer l'offre */}
             </li>
           ))}
         </ul>
@@ -82,4 +84,4 @@ const Admin = () => {
   );
 };
 
-export default Admin;
+export default Admin; // Exportation du composant Admin
