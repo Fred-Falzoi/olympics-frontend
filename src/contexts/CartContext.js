@@ -7,13 +7,7 @@ export const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
 
   const addToCart = (offer) => {
-    // Vérification si l'offre existe déjà dans le panier
-    if (!cartItems.some(item => item.id === offer.id)) {
-      setCartItems([...cartItems, offer]);
-      console.log('Offre ajoutée au panier:', offer); // Debug: pour vérifier que l'offre est bien ajoutée
-    } else {
-      console.log('Offre déjà dans le panier:', offer); // Debug: Si l'offre est déjà dans le panier
-    }
+    setCartItems([...cartItems, offer]);
   };
 
   const removeFromCart = (offerId) => {

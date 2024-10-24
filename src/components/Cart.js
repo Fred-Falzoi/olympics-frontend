@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
-import { CartContext } from '../CartContext';
+import { CartContext } from '../CartContext'; // Assure-toi que le chemin est correct
+import { Link } from 'react-router-dom';
 
 const Cart = () => {
   const { cartItems } = useContext(CartContext);
@@ -19,7 +20,11 @@ const Cart = () => {
             ))}
           </ul>
           <h3>Total: {totalPrice}€</h3>
-          <button>Payer</button>
+
+          {/* Lien vers la page de paiement */}
+          <Link to="/payment">
+            <button>Payer</button>
+          </Link>
         </section>
       ) : (
         <p>Votre panier est vide.</p>
