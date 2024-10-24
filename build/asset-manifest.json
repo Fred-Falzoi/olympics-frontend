@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/olympics-frontend/static/css/main.c29c1998.css",
+    "main.js": "/olympics-frontend/static/js/main.705d02f5.js",
+    "static/js/453.48f0f926.chunk.js": "/olympics-frontend/static/js/453.48f0f926.chunk.js",
+    "index.html": "/olympics-frontend/index.html",
+    "main.c29c1998.css.map": "/olympics-frontend/static/css/main.c29c1998.css.map",
+    "main.705d02f5.js.map": "/olympics-frontend/static/js/main.705d02f5.js.map",
+    "453.48f0f926.chunk.js.map": "/olympics-frontend/static/js/453.48f0f926.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c29c1998.css",
+    "static/js/main.705d02f5.js"
+  ]
+}
