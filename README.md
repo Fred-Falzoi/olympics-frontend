@@ -8,7 +8,7 @@ Cette application est une plateforme de billetterie développée pour les Jeux O
 - Créer un compte, se connecter, et gérer leurs achats.
 - Bénéficier d'une sécurité renforcée grâce à l'authentification à deux facteurs.
 
-Le projet inclut un **front-end** développé en **React.js**, un **back-end** en **Symfony**, ainsi qu'une base de données relationnelle en **PostgreSQL**.
+Le projet inclut un **front-end** développé en **React.js**, un **back-end** en **Node.js**, ainsi qu'une base de données relationnelle en **PostgreSQL**.
 
 ## Fonctionnalités
 
@@ -21,9 +21,9 @@ Le projet inclut un **front-end** développé en **React.js**, un **back-end** e
 ## Technologies utilisées
 
 - **Front-end** : React.js
-- **Back-end** : Symfony
+- **Back-end** : Node.js
 - **Base de données** : PostgreSQL
-- **API** : Axios pour les requêtes HTTP
+- **API** : Insomnia pour les requêtes HTTP
 - **Hébergement** : Github (front-end) et Render (back-end)
 
 ## Installation
