@@ -12,7 +12,7 @@ L'application doit traiter des données sensibles. Voici les aspects de sécurit
   - Accès limité selon les rôles (utilisateur et administrateur). L'administrateur dispose de droits supplémentaires pour la gestion des offres.
 
 ### 2. Protection des données sensibles
-- **Chiffrement des données sensibles** : Les informations personnelles et les clés de sécurité sont chiffrées à l'aide de services comme **AWS KMS**.
+- **Chiffrement des données sensibles** : Les informations personnelles et les clés de sécurité sont chiffrées.
 - **Transmission sécurisée** : Toutes les communications sont sécurisées via **HTTPS**.
   
 ### 3. Protection contre les attaques courantes
@@ -24,7 +24,7 @@ L'application doit traiter des données sensibles. Voici les aspects de sécurit
 - **Clé de vérification des e-billets** : Génération et concaténation des clés pour assurer l'authenticité des billets via un QR code sécurisé.
 
 ### 5. Journalisation et suivi des activités
-- **Surveillance des accès** : Suivi des activités des utilisateurs via des logs et utilisation de services comme **AWS CloudTrail**.
+- **Surveillance des accès** : Suivi des activités des utilisateurs via les logs système.
 
 ---
 
