@@ -1,4 +1,4 @@
-# Manuel Utilisateur de l'Application de Réservation de Billets
+# Manuel Utilisateur de l'Application
 
 Bienvenue dans l'application de réservation de billets pour les Jeux Olympiques ! Ce manuel vous guidera à travers les différentes fonctionnalités de l'application et vous expliquera comment l'utiliser de manière efficace.
 
